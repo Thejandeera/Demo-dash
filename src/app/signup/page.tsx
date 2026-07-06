@@ -10,13 +10,12 @@ import Link from "next/link";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
-import CircularProgress from "@mui/material/CircularProgress";
 
 import { useAppDispatch, useAppSelector } from "@/store";
 import { registerUser, clearError } from "@/features/auth/authSlice";
+import AuthInput from "@/atoms/AuthInput";
+import PrimaryButton from "@/atoms/PrimaryButton";
 
 const schema = yup.object().shape({
   name: yup
@@ -132,7 +131,7 @@ export default function SignUpPage() {
         )}
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          <TextField
+          <AuthInput
             margin="normal"
             required
             fullWidth
@@ -144,28 +143,9 @@ export default function SignUpPage() {
             {...register("name")}
             error={!!errors.name}
             helperText={errors.name?.message}
-            slotProps={{
-              inputLabel: {
-                style: { color: "rgba(255, 255, 255, 0.7)" },
-              },
-              input: {
-                style: { color: "white" },
-                sx: {
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255, 255, 255, 0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                },
-              },
-            }}
           />
 
-          <TextField
+          <AuthInput
             margin="normal"
             required
             fullWidth
@@ -176,28 +156,9 @@ export default function SignUpPage() {
             {...register("email")}
             error={!!errors.email}
             helperText={errors.email?.message}
-            slotProps={{
-              inputLabel: {
-                style: { color: "rgba(255, 255, 255, 0.7)" },
-              },
-              input: {
-                style: { color: "white" },
-                sx: {
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255, 255, 255, 0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                },
-              },
-            }}
           />
 
-          <TextField
+          <AuthInput
             margin="normal"
             required
             fullWidth
@@ -209,52 +170,23 @@ export default function SignUpPage() {
             {...register("password")}
             error={!!errors.password}
             helperText={errors.password?.message}
-            slotProps={{
-              inputLabel: {
-                style: { color: "rgba(255, 255, 255, 0.7)" },
-              },
-              input: {
-                style: { color: "white" },
-                sx: {
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(255, 255, 255, 0.2)",
-                  },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#60a5fa",
-                  },
-                },
-              },
-            }}
           />
 
-          <Button
+          <PrimaryButton
             type="submit"
             fullWidth
-            variant="contained"
             disabled={loading}
+            loading={loading}
             sx={{
               mt: 4,
               mb: 3,
               py: 1.5,
               borderRadius: 2.5,
-              fontWeight: 700,
-              textTransform: "none",
               fontSize: "1rem",
-              background: "linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)",
-              boxShadow: "0 4px 14px 0 rgba(59, 130, 246, 0.4)",
-              "&:hover": {
-                background: "linear-gradient(90deg, #2563eb 0%, #7c3aed 100%)",
-                transform: "translateY(-1px)",
-                boxShadow: "0 6px 20px 0 rgba(59, 130, 246, 0.5)",
-              },
-              transition: "all 0.2s ease-in-out",
             }}
           >
-            {loading ? <CircularProgress size={24} color="inherit" /> : "Sign Up"}
-          </Button>
+            Sign Up
+          </PrimaryButton>
 
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.5)" }}>
