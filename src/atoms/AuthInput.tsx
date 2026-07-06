@@ -11,21 +11,21 @@ const AuthInput = React.forwardRef<HTMLDivElement, AuthInputProps>(
         slotProps={{
           ...slotProps,
           inputLabel: {
-            style: { color: "rgba(255, 255, 255, 0.7)" },
+            style: { color: "#475569" },
             ...(slotProps?.inputLabel && typeof slotProps.inputLabel === "object" ? slotProps.inputLabel : {}),
           },
           input: {
-            style: { color: "white" },
+            style: { color: "#0f172a" },
             ...(slotProps?.input && typeof slotProps.input === "object" ? slotProps.input : {}),
             sx: {
               "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "rgba(255, 255, 255, 0.2)",
+                borderColor: "#cbd5e1",
               },
               "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#60a5fa",
+                borderColor: "#0f172a",
               },
               "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#60a5fa",
+                borderColor: "#0f172a",
               },
               ...((slotProps?.input && typeof slotProps.input === "object" && (slotProps.input as any).sx) || {}),
             },

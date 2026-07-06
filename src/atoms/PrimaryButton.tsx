@@ -17,23 +17,22 @@ export default function PrimaryButton({
   ...props
 }: PrimaryButtonProps) {
   const containedStyles = {
-    background: "linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)",
-    boxShadow: "0 4px 20px rgba(59, 130, 246, 0.4)",
-    color: "white",
+    backgroundColor: "#0f172a",
+    boxShadow: "none",
+    color: "#ffffff",
     "&:hover": {
-      background: "linear-gradient(90deg, #2563eb 0%, #7c3aed 100%)",
-      transform: "translateY(-2px)",
-      boxShadow: "0 6px 25px rgba(59, 130, 246, 0.5)",
+      backgroundColor: "#1e293b",
+      boxShadow: "none",
     },
   };
 
   const outlinedStyles = {
-    borderColor: "rgba(255, 255, 255, 0.2)",
-    color: "white",
+    borderColor: "#e2e8f0",
+    color: "#0f172a",
+    backgroundColor: "transparent",
     "&:hover": {
-      borderColor: "white",
-      backgroundColor: "rgba(255, 255, 255, 0.05)",
-      transform: "translateY(-2px)",
+      borderColor: "#0f172a",
+      backgroundColor: "#f8fafc",
     },
   };
 

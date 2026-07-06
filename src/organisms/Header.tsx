@@ -19,9 +19,10 @@ export default function Header({ user, onLogout }: HeaderProps) {
       position="fixed"
       sx={{
         zIndex: (theme) => theme.zIndex.drawer + 1,
-        background: "linear-gradient(90deg, #1e293b 0%, #0f172a 100%)",
-        borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+        backgroundColor: "#ffffff",
+        borderBottom: "1px solid #e2e8f0",
         boxShadow: "none",
+        color: "#0f172a",
       }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -31,9 +32,7 @@ export default function Header({ user, onLogout }: HeaderProps) {
           component="div"
           sx={{
             fontWeight: 800,
-            background: "linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            color: "#0f172a",
           }}
         >
           Demo Portal
@@ -42,7 +41,7 @@ export default function Header({ user, onLogout }: HeaderProps) {
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <Typography
             variant="body2"
-            sx={{ color: "rgba(255, 255, 255, 0.7)", display: { xs: "none", sm: "block" } }}
+            sx={{ color: "#475569", display: { xs: "none", sm: "block" } }}
           >
             Hello, <strong>{user?.name}</strong>
           </Typography>
@@ -50,9 +49,11 @@ export default function Header({ user, onLogout }: HeaderProps) {
             sx={{
               width: 32,
               height: 32,
-              background: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+              backgroundColor: "#f1f5f9",
+              color: "#0f172a",
               fontSize: "0.875rem",
               fontWeight: 700,
+              border: "1px solid #e2e8f0",
             }}
           >
             {user?.name ? user.name[0].toUpperCase() : "U"}
@@ -67,11 +68,11 @@ export default function Header({ user, onLogout }: HeaderProps) {
               borderRadius: 2,
               textTransform: "none",
               fontWeight: 600,
-              borderColor: "rgba(239, 68, 68, 0.4)",
-              color: "#f87171",
+              borderColor: "#ef4444",
+              color: "#ef4444",
               "&:hover": {
-                borderColor: "#ef4444",
-                backgroundColor: "rgba(239, 68, 68, 0.08)",
+                borderColor: "#dc2626",
+                backgroundColor: "#fef2f2",
               },
             }}
           >

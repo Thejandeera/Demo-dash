@@ -29,22 +29,21 @@ export default function LandingPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%)",
-        color: "white",
+        backgroundColor: "#ffffff",
+        color: "#0f172a",
         py: 6,
       }}
     >
       <Container maxWidth="md">
         <Paper
-          elevation={24}
+          elevation={0}
           sx={{
             p: { xs: 4, md: 8 },
             borderRadius: 6,
-            background: "rgba(15, 23, 42, 0.6)",
-            backdropFilter: "blur(20px)",
-            border: "1px solid rgba(255, 255, 255, 0.08)",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e2e8f0",
             textAlign: "center",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+            boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05)",
           }}
         >
           <Typography
@@ -53,9 +52,7 @@ export default function LandingPage() {
             sx={{
               fontWeight: 900,
               fontSize: { xs: "2.5rem", md: "4rem" },
-              background: "linear-gradient(90deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              color: "#0f172a",
               mb: 3,
               letterSpacing: "-0.02em",
             }}
@@ -66,7 +63,7 @@ export default function LandingPage() {
           <Typography
             variant="h5"
             sx={{
-              color: "rgba(255, 255, 255, 0.7)",
+              color: "#475569",
               fontWeight: 400,
               mb: 5,
               maxWidth: "600px",
@@ -79,7 +76,7 @@ export default function LandingPage() {
 
           {isAuthenticated ? (
             <Box>
-              <Typography variant="body1" sx={{ color: "#a78bfa", mb: 3, fontWeight: 600 }}>
+              <Typography variant="body1" sx={{ color: "#0f172a", mb: 3, fontWeight: 600 }}>
                 Logged in as {user?.name}
               </Typography>
               <PrimaryButton

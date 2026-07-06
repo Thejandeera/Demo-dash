@@ -27,8 +27,10 @@ export default function SidebarNavigation({ items, onItemClick }: SidebarNavigat
               mx: 1.5,
               my: 0.5,
               borderRadius: 2,
+              color: "#334155",
               "&:hover": {
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
+                backgroundColor: "#f1f5f9",
+                color: "#0f172a",
               },
             }}
           >

@@ -20,9 +20,9 @@ export default function Sidebar({ drawerWidth, menuItems, onItemClick }: Sidebar
         [`& .MuiDrawer-paper`]: {
           width: drawerWidth,
           boxSizing: "border-box",
-          backgroundColor: "#1e293b",
-          borderRight: "1px solid rgba(255, 255, 255, 0.08)",
-          color: "white",
+          backgroundColor: "#f8fafc",
+          borderRight: "1px solid #e2e8f0",
+          color: "#0f172a",
         },
       }}
     >

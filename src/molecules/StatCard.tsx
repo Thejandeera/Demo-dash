@@ -7,8 +7,8 @@ export interface StatCardProps {
   title: string;
   value: string | number;
   icon: React.ReactNode;
-  gradientBg: string;
-  iconBgColor: string;
+  gradientBg?: string;
+  iconBgColor?: string;
   valueColor?: string;
 }
 
@@ -16,30 +16,28 @@ export default function StatCard({
   title,
   value,
   icon,
-  gradientBg,
-  iconBgColor,
-  valueColor = "white",
 }: StatCardProps) {
   return (
     <Paper
-      elevation={10}
+      elevation={0}
       sx={{
         p: 4,
         borderRadius: 4,
-        background: gradientBg,
-        backdropFilter: "blur(12px)",
-        border: "1px solid rgba(255, 255, 255, 0.08)",
-        color: "white",
+        backgroundColor: "#ffffff",
+        border: "1px solid #e2e8f0",
+        color: "#0f172a",
         display: "flex",
         alignItems: "center",
         gap: 3,
+        boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)",
       }}
     >
       <Box
         sx={{
           p: 2,
           borderRadius: 3,
-          backgroundColor: iconBgColor,
+          backgroundColor: "#f1f5f9",
+          color: "#0f172a",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -48,10 +46,10 @@ export default function StatCard({
         {icon}
       </Box>
       <Box>
-        <Typography variant="subtitle2" sx={{ color: "rgba(255, 255, 255, 0.5)", fontWeight: 600 }}>
+        <Typography variant="subtitle2" sx={{ color: "#475569", fontWeight: 600 }}>
           {title}
         </Typography>
-        <Typography variant="h3" sx={{ fontWeight: 800, mt: 0.5, color: valueColor }}>
+        <Typography variant="h3" sx={{ fontWeight: 800, mt: 0.5, color: "#0f172a" }}>
           {value}
         </Typography>
       </Box>

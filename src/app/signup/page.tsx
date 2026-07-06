@@ -75,22 +75,21 @@ export default function SignUpPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%)",
+        backgroundColor: "#f8fafc",
         padding: 3,
       }}
     >
       <Paper
-        elevation={24}
+        elevation={0}
         sx={{
           p: 5,
           width: "100%",
           maxWidth: 420,
           borderRadius: 5,
-          background: "rgba(15, 23, 42, 0.75)",
-          backdropFilter: "blur(16px)",
-          border: "1px solid rgba(255, 255, 255, 0.1)",
-          color: "white",
-          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4)",
+          backgroundColor: "#ffffff",
+          border: "1px solid #e2e8f0",
+          color: "#0f172a",
+          boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05)",
         }}
       >
         <Box sx={{ mb: 4, textAlign: "center" }}>
@@ -99,15 +98,13 @@ export default function SignUpPage() {
             component="h1"
             sx={{
               fontWeight: 800,
-              background: "linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              color: "#0f172a",
               mb: 1,
             }}
           >
             Create Account
           </Typography>
-          <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.6)" }}>
+          <Typography variant="body2" sx={{ color: "#475569" }}>
             Sign up to get started with your account
           </Typography>
         </Box>
@@ -118,11 +115,11 @@ export default function SignUpPage() {
             sx={{
               mb: 3,
               borderRadius: 2,
-              backgroundColor: "rgba(239, 68, 68, 0.12)",
-              color: "#f87171",
-              border: "1px solid rgba(239, 68, 68, 0.2)",
+              backgroundColor: "#fef2f2",
+              color: "#ef4444",
+              border: "1px solid #fee2e2",
               "& .MuiAlert-icon": {
-                color: "#f87171",
+                color: "#ef4444",
               },
             }}
           >
@@ -189,12 +186,12 @@ export default function SignUpPage() {
           </PrimaryButton>
 
           <Box sx={{ textAlign: "center" }}>
-            <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.5)" }}>
+            <Typography variant="body2" sx={{ color: "#475569" }}>
               Already have an account?{" "}
               <Link
                 href="/signin"
                 style={{
-                  color: "#60a5fa",
+                  color: "#2563eb",
                   textDecoration: "none",
                   fontWeight: 600,
                 }}
