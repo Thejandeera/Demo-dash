@@ -60,7 +60,7 @@ export default function LandingPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Antigravity Auth
+            Demo 1
           </Typography>
 
           <Typography
@@ -74,7 +74,7 @@ export default function LandingPage() {
               lineHeight: 1.6,
             }}
           >
-            A high-performance atomic authentication flow engineered with Next.js, Redux Toolkit, and Material UI.
+            demostration 1
           </Typography>
 
           {isAuthenticated ? (
