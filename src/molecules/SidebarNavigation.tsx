@@ -37,7 +37,7 @@ export default function SidebarNavigation({ items, onItemClick }: SidebarNavigat
             <ListItemIcon sx={{ minWidth: 40 }}>{item.icon}</ListItemIcon>
             <ListItemText
               primary={
-                <Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
+                <Typography sx={{ fontSize: "1.1rem", fontWeight: 600 }}>
                   {item.text}
                 </Typography>
               }
