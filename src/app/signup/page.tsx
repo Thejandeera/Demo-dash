@@ -47,12 +47,12 @@ export default function SignUpPage() {
     resolver: yupResolver(schema),
   });
 
-  // Clear authentication errors when navigating to the page
+  
   useEffect(() => {
     dispatch(clearError());
   }, [dispatch]);
 
-  // If already authenticated, redirect to the dashboard
+  
   useEffect(() => {
     if (isAuthenticated) {
       router.push("/dashboard");
