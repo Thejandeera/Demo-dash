@@ -13,7 +13,6 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
-
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import PeopleIcon from "@mui/icons-material/People";
@@ -23,6 +22,9 @@ import Header from "@/organisms/Header";
 import Sidebar from "@/organisms/Sidebar";
 import StatCard from "@/molecules/StatCard";
 import DashboardTemplate from "@/templates/DashboardTemplate";
+
+
+import AIChatAssistant from "@/organisms/AIChatAssistant";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -120,6 +122,15 @@ export default function DashboardPage() {
               </Grid>
             </Grid>
           </Paper>
+
+          {/* 2. APPEND THE AI CHAT WIDGET HERE */}
+          <Box sx={{ mt: 5, mb: 4 }}>
+            <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, color: "#0f172a" }}>
+              AI Assistant
+            </Typography>
+            <AIChatAssistant />
+          </Box>
+          
         </Container>
       </DashboardTemplate>
     </ProtectedRoute>

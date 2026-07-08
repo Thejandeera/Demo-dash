@@ -17,7 +17,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model: google('gemini-2.0-flash'),
     messages: await convertToModelMessages(messages),
-    stopWhen: isStepCount(5),
+    stopWhen: isStepCount(3),
     tools: {
       weather: tool({
         description: 'Get the weather in a location (fahrenheit)',
